@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:math_solver/Component/colors.dart';
 import 'package:math_solver/Design%20page/bizgonit.dart';
@@ -105,7 +106,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
                         right: 58,
                         child: Container(
                           width: 60,
-                          height: 258,
+                          height: 400,
                           decoration: BoxDecoration(
                               color: AppColor.mainColor,
                               borderRadius: BorderRadius.circular(29)
@@ -152,45 +153,327 @@ class _Design2ndPageState extends State<Design2ndPage> {
   }
   _listSection(){
     return Positioned(
-      top: 320,
-      child: Container(
-        height: 130,
-        width:MediaQuery.of(context).size.width-20,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(30),
-                bottomRight: Radius.circular(30)
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0xFFd8dbe0),
-                offset: Offset(1, 1),
-                blurRadius: 20.0,
-                spreadRadius: 10,
-              )
-            ]
-        ),
+        top: 320,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Container(
+                height: 130,
+                width:MediaQuery.of(context).size.width-20,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30)
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFd8dbe0),
+                        offset: Offset(1, 1),
+                        blurRadius: 20.0,
+                        spreadRadius: 10,
+                      )
+                    ]
+                ),
 
-        child: Container(
-          /*height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,*/
-          /* margin: const EdgeInsets.only(top: 10, left: 18),*/
-          child: InkWell(
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>BizGonit()));
-            },
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image.asset("images/04.jpg",
-                  fit: BoxFit.fitWidth,
-                )
-              ],
+                child: Container(
+                  /*height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width,*/
+                  /* margin: const EdgeInsets.only(top: 10, left: 18),*/
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BizGonit()));
+                    },
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.only(bottomRight:Radius.circular(30),topRight: Radius.circular(30) ),
+                          child: Image.asset("images/01_patigonit.jpeg",
+
+                            fit: BoxFit.fitWidth,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ),
-          ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Container(
+                height: 130,
+                width:MediaQuery.of(context).size.width-20,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        bottomLeft: Radius.circular(30)
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFd8dbe0),
+                        offset: Offset(1, 1),
+                        blurRadius: 20.0,
+                        spreadRadius: 10,
+                      )
+                    ]
+                ),
+
+                child: Container(
+                  /*height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width,*/
+                  /* margin: const EdgeInsets.only(top: 10, left: 18),*/
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BizGonit()));
+                    },
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.only(bottomLeft:Radius.circular(30),topLeft: Radius.circular(30) ),
+                          child: Image.asset("images/02_bizgonit.jpeg",
+                            fit: BoxFit.fitWidth,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Container(
+                height: 130,
+                width:MediaQuery.of(context).size.width-20,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30)
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFd8dbe0),
+                        offset: Offset(1, 1),
+                        blurRadius: 20.0,
+                        spreadRadius: 10,
+                      )
+                    ]
+                ),
+
+                child: Container(
+                  /*height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width,*/
+                  /* margin: const EdgeInsets.only(top: 10, left: 18),*/
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BizGonit()));
+                    },
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.only(bottomRight:Radius.circular(30),topRight: Radius.circular(30) ),
+                          child: Image.asset("images/03_jamiti.jpeg",
+                            fit: BoxFit.fitWidth,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Container(
+                height: 130,
+                width:MediaQuery.of(context).size.width-20,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        bottomLeft: Radius.circular(30)
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFd8dbe0),
+                        offset: Offset(1, 1),
+                        blurRadius: 20.0,
+                        spreadRadius: 10,
+                      )
+                    ]
+                ),
+
+                child: Container(
+                  /*height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width,*/
+                  /* margin: const EdgeInsets.only(top: 10, left: 18),*/
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BizGonit()));
+                    },
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.only(bottomLeft:Radius.circular(30),topLeft: Radius.circular(30) ),
+                          child: Image.asset("images/04_trikonomiti.jpg",
+                            fit: BoxFit.fitWidth,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Container(
+                height: 130,
+                width:MediaQuery.of(context).size.width-20,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30)
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFd8dbe0),
+                        offset: Offset(1, 1),
+                        blurRadius: 20.0,
+                        spreadRadius: 10,
+                      )
+                    ]
+                ),
+
+                child: Container(
+                  /*height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width,*/
+                  /* margin: const EdgeInsets.only(top: 10, left: 18),*/
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BizGonit()));
+                    },
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.only(bottomRight:Radius.circular(35),topRight: Radius.circular(35) ),
+                          child: Image.asset("images/04.5_porimiti.jpeg",
+                            fit: BoxFit.fitWidth,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Container(
+                height: 130,
+                width:MediaQuery.of(context).size.width-20,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        bottomLeft: Radius.circular(30)
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFd8dbe0),
+                        offset: Offset(1, 1),
+                        blurRadius: 20.0,
+                        spreadRadius: 10,
+                      )
+                    ]
+                ),
+
+                child: Container(
+                  /*height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width,*/
+                  /* margin: const EdgeInsets.only(top: 10, left: 18),*/
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BizGonit()));
+                    },
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.only(bottomLeft:Radius.circular(30),topLeft: Radius.circular(30) ),
+                          child: Image.asset("images/05_jukti.jpeg",
+                            fit: BoxFit.fitWidth,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Container(
+                height: 130,
+                width:MediaQuery.of(context).size.width-20,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30)
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFd8dbe0),
+                        offset: Offset(1, 1),
+                        blurRadius: 20.0,
+                        spreadRadius: 10,
+                      )
+                    ]
+                ),
+
+                child: Container(
+                  /*height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width,*/
+                  /* margin: const EdgeInsets.only(top: 10, left: 18),*/
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BizGonit()));
+                    },
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.only(bottomRight:Radius.circular(30),topRight: Radius.circular(30) ),
+                          child: Image.asset("images/06_alochona.jpeg",
+                            fit: BoxFit.fitWidth,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 15,),
+          ],
         ),
-      ),
     );
   }
 }

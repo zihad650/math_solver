@@ -62,9 +62,16 @@ flutter:
     - images/background.png
     - images/curve.png
     - images/lines.png
-    - images/04.jpg
     - images/secondbackground.png
     - images/success.png
+    - images/01_patigonit.jpeg
+    - images/02_bizgonit.jpeg
+    - images/03_jamiti.jpeg
+    - images/04_trikonomiti.jpg
+    - images/04.5_porimiti.jpeg
+    - images/05_jukti.jpeg
+    - images/06_alochona.jpeg
+    - images/font_page.mp4
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

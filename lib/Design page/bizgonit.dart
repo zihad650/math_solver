@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:math_solver/Design%20page/bizgonitio_rashi.dart';
 
 class BizGonit extends StatefulWidget {
   const BizGonit({Key? key}) : super(key: key);
@@ -8,6 +9,20 @@ class BizGonit extends StatefulWidget {
 }
 
 class _BizGonitState extends State<BizGonit> {
+  final mathList = [
+    "বীজগণিতীয় রাশি",
+    "লগারিদম",
+    "সূচকীয়",
+    "সেট ফাংশন",
+    "ম্যাট্সি ও নির্ণায়ক",
+    "ভেক্টর",
+    "অন্তরীকরন",
+    "যোগজীকরন",
+    "বহুপদী সমীকরন",
+    "দ্বিপদী বিস্তৃতি",
+    "জটিল সংখ্যা",
+  ];
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -16,7 +31,6 @@ class _BizGonitState extends State<BizGonit> {
       body: Container(
         padding: const EdgeInsets.only(top: 80, left: 20, right: 20),
         height: height,
-
         width: width,
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -72,8 +86,8 @@ class _BizGonitState extends State<BizGonit> {
                 removeTop: true,
                 context: context,
                 child: ListView.builder(
-                  itemCount: 15,
-                  itemBuilder: ( _, index){
+                  itemCount: mathList.length,
+                  itemBuilder: ( context, index){
                     return Container(
                       child: Column(
                         children: [
@@ -91,11 +105,13 @@ class _BizGonitState extends State<BizGonit> {
                               ),
                               GestureDetector(
                                 onTap: (){
-
+                                      Navigator.push(context,
+                                      MaterialPageRoute(builder: (context)=>BizgonitioRashi(mathList[index]))
+                                      );
                                 },
                                 child: Container(
                                   margin: const EdgeInsets.only(left: 10, top: 15),
-                                  child: Text("বীজগনিতীয় রাশি",
+                                  child: Text(mathList[index],
                                     style: TextStyle(
                                       fontSize: 30,
                                       fontWeight: FontWeight.bold,

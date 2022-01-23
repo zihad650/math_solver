@@ -1,6 +1,6 @@
 class model {
-  late String A;
-  late String B;
+  late String biz;
+  late String shuc;
   late String C;
   late String D;
   late String E;

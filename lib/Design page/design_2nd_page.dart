@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:math_solver/Component/colors.dart';
 import 'package:math_solver/Design%20page/bizgonit.dart';
 import 'package:math_solver/Design%20page/button_menu.dart';
+import 'package:math_solver/Sector/pati_gonit.dart';
 
 class Design2ndPage extends StatefulWidget {
   const Design2ndPage({Key? key}) : super(key: key);
@@ -167,8 +168,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
                   ]),
               child: InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> PatiGonit("")));
                 },
                 child: Stack(
                   fit: StackFit.expand,
@@ -211,7 +211,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                      MaterialPageRoute(builder: (context) => BizGonit()));
                 },
                 child: Stack(
                   fit: StackFit.expand,
@@ -254,7 +254,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                      MaterialPageRoute(builder: (context) => BizGonit()));
                 },
                 child: Stack(
                   fit: StackFit.expand,
@@ -297,7 +297,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                      MaterialPageRoute(builder: (context) => BizGonit()));
                 },
                 child: Stack(
                   fit: StackFit.expand,
@@ -340,7 +340,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                      MaterialPageRoute(builder: (context) => BizGonit()));
                 },
                 child: Stack(
                   fit: StackFit.expand,
@@ -383,7 +383,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                      MaterialPageRoute(builder: (context) => BizGonit()));
                 },
                 child: Stack(
                   fit: StackFit.expand,
@@ -426,7 +426,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                      MaterialPageRoute(builder: (context) =>  BizGonit()));
                 },
                 child: Stack(
                   fit: StackFit.expand,

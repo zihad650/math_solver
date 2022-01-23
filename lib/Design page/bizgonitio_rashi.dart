@@ -28,7 +28,7 @@ class _BizgonitioRashiState extends State<BizgonitioRashi> {
               image: DecorationImage(
                 fit: BoxFit.fill,
                 image: AssetImage(
-                    "images/secondbackground.png"
+                    "images/newpage.png"
                 ),
               ),
             ),

@@ -72,6 +72,7 @@ flutter:
     - images/05_jukti.jpeg
     - images/06_alochona.jpeg
     - images/font_page.png
+    - images/newpage.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

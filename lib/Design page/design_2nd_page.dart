@@ -15,11 +15,10 @@ class _Design2ndPageState extends State<Design2ndPage> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: AppColor.backGroundColor,
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           height: height,
           child: Stack(
             children: [
@@ -33,7 +32,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
   }
 
   _headSection() {
-    return Container(
+    return SizedBox(
       height: 310,
       child: Stack(
         children: [
@@ -52,7 +51,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
         child: Container(
           height: 300,
           width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage("images/background.png"))),
@@ -66,7 +65,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
         bottom: 10,
         child: Container(
           height: MediaQuery.of(context).size.height * 0.1,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.cover, image: AssetImage("images/curve.png"))),
         ));
@@ -84,14 +83,14 @@ class _Design2ndPageState extends State<Design2ndPage> {
                 backgroundColor: Colors.transparent,
                 context: context,
                 builder: (BuildContext bc) {
-                  return Container(
+                  return SizedBox(
                     height: MediaQuery.of(context).size.height - 240,
                     child: Stack(
                       children: [
                         Positioned(
                             bottom: 0,
                             child: Container(
-                              color: Color(0xFFeef1f4).withOpacity(0.7),
+                              color: const Color(0xFFeef1f4).withOpacity(0.7),
                               width: MediaQuery.of(context).size.width,
                               height: MediaQuery.of(context).size.height - 300,
                             )),
@@ -132,12 +131,12 @@ class _Design2ndPageState extends State<Design2ndPage> {
             height: 60,
             width: 60,
             decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("images/lines.png")),
+                image: const DecorationImage(image: AssetImage("images/lines.png")),
                 boxShadow: [
                   BoxShadow(
                       blurRadius: 15,
-                      offset: Offset(0, 1),
-                      color: Color(0xFF11324d).withOpacity(0.2))
+                      offset: const Offset(0, 1),
+                      color: const Color(0xFF11324d).withOpacity(0.2))
                 ]),
           ),
         ));
@@ -153,7 +152,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
             child: Container(
               height: 130,
               width: MediaQuery.of(context).size.width - 20,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(30),
@@ -166,34 +165,29 @@ class _Design2ndPageState extends State<Design2ndPage> {
                       spreadRadius: 10,
                     )
                   ]),
-              child: Container(
-                /*height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,*/
-                /* margin: const EdgeInsets.only(top: 10, left: 18),*/
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BizGonit()));
-                  },
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(30),
-                            topRight: Radius.circular(30)),
-                        child: Image.asset(
-                          "images/01_patigonit.jpeg",
-                          fit: BoxFit.fitWidth,
-                        ),
-                      )
-                    ],
-                  ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                },
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          bottomRight: Radius.circular(30),
+                          topRight: Radius.circular(30)),
+                      child: Image.asset(
+                        "images/01_patigonit.jpeg",
+                        fit: BoxFit.fitWidth,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -201,7 +195,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
             child: Container(
               height: 130,
               width: MediaQuery.of(context).size.width - 20,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
@@ -214,34 +208,29 @@ class _Design2ndPageState extends State<Design2ndPage> {
                       spreadRadius: 10,
                     )
                   ]),
-              child: Container(
-                /*height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,*/
-                /* margin: const EdgeInsets.only(top: 10, left: 18),*/
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BizGonit()));
-                  },
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(30),
-                            topLeft: Radius.circular(30)),
-                        child: Image.asset(
-                          "images/02_bizgonit.jpeg",
-                          fit: BoxFit.fitWidth,
-                        ),
-                      )
-                    ],
-                  ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                },
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          bottomLeft: Radius.circular(30),
+                          topLeft: Radius.circular(30)),
+                      child: Image.asset(
+                        "images/02_bizgonit.jpeg",
+                        fit: BoxFit.fitWidth,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -249,7 +238,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
             child: Container(
               height: 130,
               width: MediaQuery.of(context).size.width - 20,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(30),
@@ -262,34 +251,29 @@ class _Design2ndPageState extends State<Design2ndPage> {
                       spreadRadius: 10,
                     )
                   ]),
-              child: Container(
-                /*height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,*/
-                /* margin: const EdgeInsets.only(top: 10, left: 18),*/
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BizGonit()));
-                  },
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(30),
-                            topRight: Radius.circular(30)),
-                        child: Image.asset(
-                          "images/03_jamiti.jpeg",
-                          fit: BoxFit.fitWidth,
-                        ),
-                      )
-                    ],
-                  ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                },
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          bottomRight: Radius.circular(30),
+                          topRight: Radius.circular(30)),
+                      child: Image.asset(
+                        "images/03_jamiti.jpeg",
+                        fit: BoxFit.fitWidth,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -297,7 +281,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
             child: Container(
               height: 130,
               width: MediaQuery.of(context).size.width - 20,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
@@ -310,34 +294,29 @@ class _Design2ndPageState extends State<Design2ndPage> {
                       spreadRadius: 10,
                     )
                   ]),
-              child: Container(
-                /*height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,*/
-                /* margin: const EdgeInsets.only(top: 10, left: 18),*/
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BizGonit()));
-                  },
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(30),
-                            topLeft: Radius.circular(30)),
-                        child: Image.asset(
-                          "images/04_trikonomiti.jpg",
-                          fit: BoxFit.fitWidth,
-                        ),
-                      )
-                    ],
-                  ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                },
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          bottomLeft: Radius.circular(30),
+                          topLeft: Radius.circular(30)),
+                      child: Image.asset(
+                        "images/04_trikonomiti.jpg",
+                        fit: BoxFit.fitWidth,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -345,7 +324,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
             child: Container(
               height: 130,
               width: MediaQuery.of(context).size.width - 20,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(30),
@@ -358,34 +337,29 @@ class _Design2ndPageState extends State<Design2ndPage> {
                       spreadRadius: 10,
                     )
                   ]),
-              child: Container(
-                /*height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,*/
-                /* margin: const EdgeInsets.only(top: 10, left: 18),*/
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BizGonit()));
-                  },
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(35),
-                            topRight: Radius.circular(35)),
-                        child: Image.asset(
-                          "images/04.5_porimiti.jpeg",
-                          fit: BoxFit.fitWidth,
-                        ),
-                      )
-                    ],
-                  ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                },
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          bottomRight: Radius.circular(35),
+                          topRight: Radius.circular(35)),
+                      child: Image.asset(
+                        "images/04.5_porimiti.jpeg",
+                        fit: BoxFit.fitWidth,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -393,7 +367,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
             child: Container(
               height: 130,
               width: MediaQuery.of(context).size.width - 20,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
@@ -406,34 +380,29 @@ class _Design2ndPageState extends State<Design2ndPage> {
                       spreadRadius: 10,
                     )
                   ]),
-              child: Container(
-                /*height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,*/
-                /* margin: const EdgeInsets.only(top: 10, left: 18),*/
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BizGonit()));
-                  },
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(30),
-                            topLeft: Radius.circular(30)),
-                        child: Image.asset(
-                          "images/05_jukti.jpeg",
-                          fit: BoxFit.fitWidth,
-                        ),
-                      )
-                    ],
-                  ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                },
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          bottomLeft: Radius.circular(30),
+                          topLeft: Radius.circular(30)),
+                      child: Image.asset(
+                        "images/05_jukti.jpeg",
+                        fit: BoxFit.fitWidth,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -441,7 +410,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
             child: Container(
               height: 130,
               width: MediaQuery.of(context).size.width - 20,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(30),
@@ -454,34 +423,29 @@ class _Design2ndPageState extends State<Design2ndPage> {
                       spreadRadius: 10,
                     )
                   ]),
-              child: Container(
-                /*height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,*/
-                /* margin: const EdgeInsets.only(top: 10, left: 18),*/
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BizGonit()));
-                  },
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(30),
-                            topRight: Radius.circular(30)),
-                        child: Image.asset(
-                          "images/06_alochona.jpeg",
-                          fit: BoxFit.fitWidth,
-                        ),
-                      )
-                    ],
-                  ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const BizGonit()));
+                },
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          bottomRight: Radius.circular(30),
+                          topRight: Radius.circular(30)),
+                      child: Image.asset(
+                        "images/06_alochona.jpeg",
+                        fit: BoxFit.fitWidth,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
         ],

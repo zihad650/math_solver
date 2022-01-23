@@ -309,8 +309,7 @@ class _Design2ndPageState extends State<Design2ndPage> {
                       blurRadius: 20.0,
                       spreadRadius: 10,
                     )
-                  ]
-              ),
+                  ]),
               child: Container(
                 /*height: MediaQuery.of(context).size.height,
                       width: MediaQuery.of(context).size.width,*/
